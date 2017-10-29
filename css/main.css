@@ -1,0 +1,635 @@
+/*
+    Ryan Musselwhite's Portfolio CSS
+*/
+
+/* Core Elements */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Lato, Helvetica;
+    background: #232526; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #979fa3, #6d7174);
+    background: linear-gradient(to left, #979fa3, #6d7174);
+    color: #434c5b;
+
+}
+
+h1, h2, h3, h4 {
+    font-weight: 300;
+}
+
+/* Gradient Animation & Animation */
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+.u-animate {
+    opacity: 0;
+}
+
+.u-animated {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    opacity: 1;
+}
+
+.loader{
+    text-align:center;
+}
+
+.cssload-thecube {
+    width: 73px;
+    height: 73px;
+    margin: 0 auto;
+    margin-top: 49px;
+    position: relative;
+    transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+}
+.cssload-thecube .cssload-cube {
+    position: relative;
+    transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+}
+.cssload-thecube .cssload-cube {
+    float: left;
+    width: 50%;
+    height: 50%;
+    position: relative;
+    transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+}
+.cssload-thecube .cssload-cube:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(43,160,199);
+    animation: cssload-fold-thecube 2.76s infinite linear both;
+    -o-animation: cssload-fold-thecube 2.76s infinite linear both;
+    -ms-animation: cssload-fold-thecube 2.76s infinite linear both;
+    -webkit-animation: cssload-fold-thecube 2.76s infinite linear both;
+    -moz-animation: cssload-fold-thecube 2.76s infinite linear both;
+    transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+}
+.cssload-thecube .cssload-c2 {
+    transform: scale(1.1) rotateZ(90deg);
+    -o-transform: scale(1.1) rotateZ(90deg);
+    -ms-transform: scale(1.1) rotateZ(90deg);
+    -webkit-transform: scale(1.1) rotateZ(90deg);
+    -moz-transform: scale(1.1) rotateZ(90deg);
+}
+.cssload-thecube .cssload-c3 {
+    transform: scale(1.1) rotateZ(180deg);
+    -o-transform: scale(1.1) rotateZ(180deg);
+    -ms-transform: scale(1.1) rotateZ(180deg);
+    -webkit-transform: scale(1.1) rotateZ(180deg);
+    -moz-transform: scale(1.1) rotateZ(180deg);
+}
+.cssload-thecube .cssload-c4 {
+    transform: scale(1.1) rotateZ(270deg);
+    -o-transform: scale(1.1) rotateZ(270deg);
+    -ms-transform: scale(1.1) rotateZ(270deg);
+    -webkit-transform: scale(1.1) rotateZ(270deg);
+    -moz-transform: scale(1.1) rotateZ(270deg);
+}
+.cssload-thecube .cssload-c2:before {
+    animation-delay: 0.35s;
+    -o-animation-delay: 0.35s;
+    -ms-animation-delay: 0.35s;
+    -webkit-animation-delay: 0.35s;
+    -moz-animation-delay: 0.35s;
+}
+.cssload-thecube .cssload-c3:before {
+    animation-delay: 0.69s;
+    -o-animation-delay: 0.69s;
+    -ms-animation-delay: 0.69s;
+    -webkit-animation-delay: 0.69s;
+    -moz-animation-delay: 0.69s;
+}
+.cssload-thecube .cssload-c4:before {
+    animation-delay: 1.04s;
+    -o-animation-delay: 1.04s;
+    -ms-animation-delay: 1.04s;
+    -webkit-animation-delay: 1.04s;
+    -moz-animation-delay: 1.04s;
+}
+
+
+
+@keyframes cssload-fold-thecube {
+    0%, 10% {
+        transform: perspective(136px) rotateX(-180deg);
+        opacity: 0;
+    }
+    25%,
+    75% {
+        transform: perspective(136px) rotateX(0deg);
+        opacity: 1;
+    }
+    90%,
+    100% {
+        transform: perspective(136px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+@-o-keyframes cssload-fold-thecube {
+    0%, 10% {
+        -o-transform: perspective(136px) rotateX(-180deg);
+        opacity: 0;
+    }
+    25%,
+    75% {
+        -o-transform: perspective(136px) rotateX(0deg);
+        opacity: 1;
+    }
+    90%,
+    100% {
+        -o-transform: perspective(136px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes cssload-fold-thecube {
+    0%, 10% {
+        -ms-transform: perspective(136px) rotateX(-180deg);
+        opacity: 0;
+    }
+    25%,
+    75% {
+        -ms-transform: perspective(136px) rotateX(0deg);
+        opacity: 1;
+    }
+    90%,
+    100% {
+        -ms-transform: perspective(136px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes cssload-fold-thecube {
+    0%, 10% {
+        -webkit-transform: perspective(136px) rotateX(-180deg);
+        opacity: 0;
+    }
+    25%,
+    75% {
+        -webkit-transform: perspective(136px) rotateX(0deg);
+        opacity: 1;
+    }
+    90%,
+    100% {
+        -webkit-transform: perspective(136px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes cssload-fold-thecube {
+    0%, 10% {
+        -moz-transform: perspective(136px) rotateX(-180deg);
+        opacity: 0;
+    }
+    25%,
+    75% {
+        -moz-transform: perspective(136px) rotateX(0deg);
+        opacity: 1;
+    }
+    90%,
+    100% {
+        -moz-transform: perspective(136px) rotateY(180deg);
+        opacity: 0;
+    }
+}
+
+/* Main Container */
+
+.mainContainer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    box-shadow: 0 4px 80px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    background: #fff;
+}
+
+/* Home Container */
+.mainContainer-home {
+    background: #FFA17F;
+    background: linear-gradient(30deg, #C0392B, #E57D22, #2980B9, #2C3F51, #232526, #414345);
+    background-size: 600% 600%;
+    -webkit-animation: Gradient 20s linear infinite;
+    -moz-animation: Gradient 20s linear infinite;
+    animation: Gradient 20s linear infinite;
+    color: #fff;
+    height: 620px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%);
+}
+
+.mainContainer-home-menu {
+    background: none;
+    border: none;
+    padding-top: 20px;
+}
+
+.mainContainer-home h1 {
+    font-weight: 100;
+    font-size: 55px;
+    margin-top: 0;
+}
+
+.mainContainer-home h4 {
+    font-weight: 300;
+}
+
+.navbar-default .navbar-nav > li > a {
+    opacity: 0.8;
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-brand:hover {
+    color: #FFF;
+}
+
+.navbar > .container-fluid .navbar-brand {
+    margin-left: 0;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    opacity: 1;
+}
+
+.navbar-default .navbar-brand {
+    color: #FFF;
+    font-weight: bold;
+    border-bottom: 3px solid #fff;
+    padding: 0;
+    height: auto;
+    margin-left: 20px;
+}
+
+.mainContainer-home-menu .nav-center {
+    float: none;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+}
+
+.navbar-nav{
+    margin: 0;
+}
+
+.navbar-nav>li{
+    float: none;
+    display: inline-block;
+}
+
+.mainContainer-home-menu a:hover {
+    opacity: 1;
+}
+
+.u-bold {
+    font-weight: 700 !important;
+}
+
+.mainContainer-home .avatar {
+    margin: 0 auto;
+    background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    height: 100px;
+    width: 2px;
+}
+
+.mainContainer-home .avatarImage {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: 3px solid #fff;
+    margin-top: 50px;
+    background: #fff;
+}
+
+/* About Section */
+
+.mainContainer-about {
+    clear: both;
+    padding: 0 30px 60px 30px;
+
+}
+
+.mainContainer-about h1 {
+    font-size: 40px;
+    padding-top: 7px;
+}
+
+.mainContainer-about h1:not(:first-child) {
+    margin: 40px 0 40px 0;
+}
+
+.mainContainer-about > h1:first-child {
+    margin: 10px 0 40px 0;
+}
+
+.mainContainer-about p {
+    margin-bottom: 20px;
+    padding: 5px 20px;
+}
+
+.menuBlock {
+    position: fixed;
+    background: #fff;
+    margin: 0;
+    height: 100%;
+    border-right: 1px solid #CCCCCC;
+}
+
+.menuBlock h1 {
+    margin-top: 90px;
+}
+
+/* Cards */
+
+.u-hoverBlock {
+    margin: 0 0 20px 0;
+    cursor: pointer;
+    height: 320px;
+    opacity: 1;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    padding: 227px 0 0 0;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+    border-radius: 4px;
+}
+
+.u-hoverBlock:hover {
+    opacity: 0.9;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-box-shadow: 0 4px 20px 0 rgba(168, 182, 191, .6);
+    box-shadow: 0 4px 20px 0 rgba(168, 182, 191, .6);
+}
+
+.u-hoverBlock h1, .u-hoverBlock p {
+    padding: 3px 20px 2px 20px;
+    background: #fefefe;
+}
+
+.u-hoverBlock h1 {
+    border-top: 1px solid #ccc;
+    font-size: 30px;
+    margin: 28px 0 0 0;
+}
+
+.port-1 {
+    background: #000 url('/img/port-1/1.jpg') top center;
+    background-size: cover;
+}
+
+.port-2 {
+    background: #000 url('/img/port-2/1.jpg');
+    background-size: cover;
+}
+
+.port-3 {
+    background: #000 url('/img/port-3/1.jpg');
+    background-size: cover;
+}
+
+.port-4 {
+    background: #000 url('/img/port-4/1.jpg');
+    background-size: cover;
+}
+
+.port-5 {
+    background: #000 url('/img/port-5/1.jpg');
+    background-size: cover;
+}
+
+.port-6 {
+    background: #000 url('/img/port-6/2.jpg');
+    background-size: cover;
+}
+
+.port-7 {
+    background: #000 url('/img/port-7/1.jpg');
+    background-size: cover;
+}
+
+.port-8 {
+    background: #000 url('/img/port-8/1.jpg');
+    background-size: cover;
+}
+
+.port-9 {
+    background: #000 url('/img/port-9/1.jpg');
+    background-size: cover;
+}
+
+.port-10 {
+    background: #000 url('/img/port-10/1.jpg');
+    background-size: cover;
+}
+
+/* Portfolio Detail Overlay */
+
+.u-portfolioEntry {
+    background: #efefef;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: scroll;
+    top: 0;
+}
+
+.u-portfolioEntry.inactive {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.u-portfolioEntry.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.u-closeButton {
+    z-index: 100;
+    font-weight: bold;
+    font-size: 28px;
+    margin: 50px 0 0 0;
+    cursor: pointer;
+    transition: all 1s;
+    position: absolute;
+    right: 30px;
+    top: 0;
+}
+
+.u-closeButton:hover {
+    color: #888;
+    transition: all 1s;
+}
+
+.u-innerBlock {
+    max-height: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.u-innerBlock h1 {
+    padding-top: 50px;
+}
+
+.u-marginTop {
+    margin-top: 30px;
+}
+
+.u-thumbnail {
+    clear: both;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.u-thumbnail:first-child {
+    margin-top: 100px;
+}
+
+.buttonCustom {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    border: 2px solid #633DB6;
+    padding: 4px 30px;
+    border-radius: 30px;
+    margin-top: 20px;
+    display: block;
+    text-decoration: none;
+    color: #633DB6;
+}
+
+.buttonCustom:hover {
+    background: #633DB6;
+    color: #fff;
+    text-decoration: none;
+}
+
+.img-responsive {
+    background-size: cover;
+    width: 100%;
+}
+
+.padding0{
+    padding: 0;
+}
+
+/* Mobile Changes */
+@media (min-width: 768px) {
+    .mainContainer-home-menu .navbar-right {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .mainContainer-home {
+        height: 500px;
+    }
+
+    .mainContainer-about h1 {
+        margin-top: 0;
+    }
+
+    .mainContainer-home h1 {
+        font-size: 30px;
+    }
+
+    .mainContainer-about .u-hoverBlock h1 {
+        font-size: 20px;
+        margin-top: 24px;
+        padding-top: 15px;
+    }
+
+    .mainContainer-home .u-hoverBlock h4 {
+        font-size: 15px;
+    }
+
+    .mainContainer-home h4{
+        padding: 0 30px;
+    }
+
+    .u-hoverBlock p {
+        font-size: 14px;
+        padding-bottom: 6px;
+    }
+
+    .mainContainer-home-menu .nav-center {
+        text-align: center;
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .menuBlock {
+        position: relative;
+        background: none;
+        border: none;
+    }
+
+    .u-portfolioEntry {
+        background: #fff;
+    }
+
+    .u-thumbnail:first-child {
+        margin-top: 30px;
+    }
+}
